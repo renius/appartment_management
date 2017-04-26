@@ -1,0 +1,13 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Description:
+  = @post.description
+%p
+  %b Body:
+  = @post.body
+
+= link_to 'Back', posts_path
