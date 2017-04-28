@@ -36,10 +36,19 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.4)
+    ast (2.3.0)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
+    bullet (5.5.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
+    coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -50,6 +59,10 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.0.5)
     debug_inspector (0.0.2)
+    easy_translate (0.5.0)
+      json
+      thread
+      thread_safe
     erubis (2.7.0)
     execjs (2.7.0)
     globalid (0.4.0)
@@ -62,12 +75,24 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    highline (1.7.8)
     html2haml (2.1.0)
       erubis (~> 2.7.0)
       haml (~> 4.0)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
     i18n (0.8.1)
+    i18n-tasks (0.9.13)
+      activesupport (>= 4.0.2)
+      ast (>= 2.1.0)
+      easy_translate (>= 0.5.0)
+      erubis
+      highline (>= 1.7.3)
+      i18n
+      parser (>= 2.2.3.0)
+      rainbow (~> 2.2)
+      terminal-table (>= 1.5.1)
+    interception (0.5)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -75,6 +100,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    json (2.1.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
     less-rails (2.8.0)
@@ -87,6 +113,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -95,7 +122,29 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    parser (2.4.0.0)
+      ast (~> 2.2)
     pg (0.20.0)
+    powerpack (0.1.1)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.2)
+      byebug (~> 9.0)
+      pry (~> 0.10)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
+    pry-rescue (1.4.5)
+      interception (>= 0.5)
+      pry
+    pry-stack_explorer (0.4.9.2)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
+    puma (3.8.2)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -128,8 +177,17 @@ GEM
       activesupport (= 4.2.8)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.2.2)
+      rake
     rake (12.0.0)
     ref (2.0.0)
+    rubocop (0.48.1)
+      parser (>= 2.3.3.1, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 1.99.1, < 3.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.8.1)
     ruby_parser (3.9.0)
       sexp_processor (~> 4.1)
     sass (3.4.23)
@@ -140,6 +198,7 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
     sexp_processor (4.9.0)
+    slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -149,10 +208,13 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    terminal-table (1.7.3)
+      unicode-display_width (~> 1.1.1)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
     thor (0.19.4)
+    thread (0.2.2)
     thread_safe (0.3.6)
     tilt (2.0.7)
     turbolinks (5.0.1)
@@ -167,6 +229,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
+    unicode-display_width (1.1.3)
+    uniform_notifier (1.10.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -177,15 +241,25 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
+  better_errors
+  bullet
   coffee-rails (~> 4.1.0)
   haml-rails
+  i18n-tasks
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
   pg (~> 0.15)
+  pry
+  pry-byebug
+  pry-rails
+  pry-remote
+  pry-rescue
+  pry-stack_explorer
+  puma
   rails (= 4.2.8)
   rails_12factor
+  rubocop
   sass-rails (~> 5.0)
   spring
   therubyracer
@@ -195,4 +269,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
