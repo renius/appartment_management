@@ -10,11 +10,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+gem 'devise'
 gem 'haml-rails'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-gem 'devise'
 
 group :production do
   gem 'rails_12factor'
