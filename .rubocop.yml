@@ -1,0 +1,68 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  TargetRailsVersion: 4.2
+  Exclude:
+    - db/schema.rb
+    - bin/*
+    - vendor/bundle/**/*
+
+# Metrics
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/*.rb
+    - config/initializers/**/*.rb
+    - config/routes.rb
+    - spec/**/*.rb
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/MethodLength:
+  Max: 15
+
+# Style cops
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/LambdaCall:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*_spec.rb
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  Enabled: true
+
+# Lints
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+# Rails-specific cops
+
+Rails:
+  Enabled: true
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
