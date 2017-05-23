@@ -21,6 +21,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'guard-rails'
   gem 'i18n-tasks', require: false
   gem 'rubocop',    require: false
 
@@ -31,6 +32,10 @@ group :development, :test do
   gem 'pry-remote'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
+
+  ### Tests ###
+  gem 'ffaker'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
