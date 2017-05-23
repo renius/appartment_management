@@ -31,6 +31,9 @@ group :development, :test do
   gem 'pry-remote'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
+
+  ### Tests ###
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
