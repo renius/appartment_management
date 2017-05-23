@@ -34,6 +34,7 @@ group :development, :test do
   gem 'pry-stack_explorer'
 
   ### Tests ###
+  gem 'ffaker'
   gem 'rspec-rails', '~> 3.5'
 end
 

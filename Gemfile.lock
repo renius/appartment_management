@@ -66,6 +66,7 @@ GEM
       thread_safe
     erubis (2.7.0)
     execjs (2.7.0)
+    ffaker (2.5.0)
     ffi (1.9.18)
     formatador (0.2.5)
     globalid (0.4.0)
@@ -296,6 +297,7 @@ DEPENDENCIES
   better_errors
   bullet
   devise
+  ffaker
   guard-rails
   haml-rails
   i18n-tasks
