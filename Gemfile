@@ -21,6 +21,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'guard-rails'
   gem 'i18n-tasks', require: false
   gem 'rubocop',    require: false
