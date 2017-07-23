@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
+gem 'responders'
 
 group :production do
   gem 'rails_12factor'
