@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+gem 'dotenv-rails'
+
 gem 'devise'
 gem 'haml-rails'
 gem 'less-rails'
@@ -22,7 +24,6 @@ group :production do
 end
 
 group :development, :test do
-  gem 'dotenv-rails'
   gem 'guard-rails'
   gem 'i18n-tasks', require: false
   gem 'rubocop',    require: false
