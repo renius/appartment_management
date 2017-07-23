@@ -319,6 +319,7 @@ DEPENDENCIES
   puma
   rails (= 4.2.8)
   rails_12factor
+  responders
   rspec-rails (~> 3.5)
   rubocop
   sass-rails (~> 5.0)
